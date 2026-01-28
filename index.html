@@ -3595,26 +3595,26 @@
             background-image: none !important;
         }
     </style>
-        <!-- Meta Pixel Code -->
-        <script>
-            !function (f, b, e, v, n, t, s) {
-                if (f.fbq) return; n = f.fbq = function () {
-                    n.callMethod ?
-                        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-                };
-                if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-                n.queue = []; t = b.createElement(e); t.async = !0;
-                t.src = v; s = b.getElementsByTagName(e)[0];
-                s.parentNode.insertBefore(t, s)
-            }(window, document, 'script',
-                'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '833375752774369');
-            fbq('track', 'PageView');
-            fbq('track', 'ViewContent');
-        </script>
-        <noscript><img height="1" width="1" style="display:none"
-                src="https://www.facebook.com/tr?id=833375752774369&ev=PageView&noscript=1" /></noscript>
-        <!-- End Meta Pixel Code -->
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '833375752774369');
+        fbq('track', 'PageView');
+        fbq('track', 'ViewContent');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=833375752774369&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
     <!-- <script>!function (f, b, e, v, n, t, s) { if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0; t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s) }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js'); fbq("init", "4265473513741342"); console.log(`fbq("init", "4265473513741342")`); window.ladi_conversion_api = window.ladi_conversion_api || {}; window.ladi_conversion_api.facebook = window.ladi_conversion_api.facebook || { pixels: [] }; window.ladi_conversion_api.facebook.pixels.push('4265473513741342'); window.ladi_fbq("track", "PageView");</script>
     <noscript><img height="1" width="1" style="display:none;"
             src="https://www.facebook.com/tr?id=4265473513741342&ev=PageView&noscript=1" /></noscript>
@@ -4060,14 +4060,14 @@
                                 <div class='ladi-form-item ladi-form-checkbox ladi-form-checkbox-vertical'>
                                     <div class="ladi-form-checkbox-box-item">
                                         <div class="ladi-form-checkbox-item"><input tabindex="4" name="form_item18"
-                                                type="checkbox"
-                                                value="1bộ  10m  + usb 2 đầu : 149k + 26 k ship" /><span
+                                                type="checkbox" value="1bộ  10m  + usb 2 đầu : 149k + 26 k ship" /><span
                                                 data-checked="false">1 bộ 10m + usb 2 đầu : 149k + 26 k ship</span>
                                         </div>
                                         <div class="ladi-form-checkbox-item"><input tabindex="4" name="form_item18"
                                                 type="checkbox"
                                                 value="2 bộ 20m  + usb 3 đầu  : 299k + Miễn  ship( bán chạy )" /><span
-                                                data-checked="false">2 bộ 20m + usb 3 đầu : 299k + Miễn ship( bán chạy )</span>
+                                                data-checked="false">2 bộ 20m + usb 3 đầu : 299k + Miễn ship( bán chạy
+                                                )</span>
                                         </div>
                                         <div class="ladi-form-checkbox-item"><input tabindex="4" name="form_item18"
                                                 type="checkbox"
@@ -4075,9 +4075,9 @@
                                                 data-checked="false">3 Bộ 30m + usb 5 đầu : 399k + Miễn ship ( nên mua
                                                 )</span></div>
                                         <div class="ladi-form-checkbox-item"><input tabindex="4" name="form_item18"
-                                                type="checkbox"
-                                                value="5 Bộ  + usb 5 đầu : 599k + Miễn ship " /><span
-                                                data-checked="false">5 Bộ 50m + usb 5 đầu : 599k + Miễn ship</span></div>
+                                                type="checkbox" value="5 Bộ  + usb 5 đầu : 599k + Miễn ship " /><span
+                                                data-checked="false">5 Bộ 50m + usb 5 đầu : 599k + Miễn ship</span>
+                                        </div>
                                         <div class="ladi-form-checkbox-item"><input tabindex="4" name="form_item18"
                                                 type="checkbox" value="Tư vấn số lượng khác." /><span
                                                 data-checked="false">Tư vấn số lượng khác.</span></div>
@@ -4521,6 +4521,22 @@
 
             button.addEventListener("click", function (e) {
                 e.preventDefault();
+                const phoneInput = form.querySelector("input[name='phone']");
+                const phone = phoneInput.value.trim();
+
+                if (phone === "") {
+                    alert("Vui lòng nhập số điện thoại");
+                    phoneInput.focus();
+                    return;
+                }
+
+                // Regex SĐT Việt Nam
+                const phoneRegex = /^(?:\+84|0)(3|5|7|8|9)[0-9]{8}$/;
+                if (!phoneRegex.test(phone)) {
+                    alert("Số điện thoại không hợp lệ");
+                    phoneInput.focus();
+                    return;
+                }
 
                 const formData = new FormData(form);
 
